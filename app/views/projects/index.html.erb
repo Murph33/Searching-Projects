@@ -1,0 +1,17 @@
+<h1>All Projects</h1>
+
+<%= form_tag "search" do %>
+
+  <div>
+    <%= label_tag :search %>
+    <%= text_field_tag :search %>
+  </div>
+  <%= submit_tag "Search!" %>
+<% end %>
+
+<% @projects.each do |project| %>
+  <div>
+    <%= project.name %><br>
+    <%= project.description %><br>
+  </div>
+<% end %>
